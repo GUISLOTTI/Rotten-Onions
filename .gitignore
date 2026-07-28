@@ -1,0 +1,39 @@
+# ─── .NET ───────────────────────────────────────────────
+bin/
+obj/
+*.user
+*.suo
+.vs/
+[Dd]ebug/
+[Rr]elease/
+artifacts/
+*.dll
+*.pdb
+
+# ─── Node / Angular ─────────────────────────────────────
+node_modules/
+frontend/**/dist/
+frontend/**/.angular/
+npm-debug.log*
+yarn-error.log*
+
+# ─── Segredos e config local ────────────────────────────
+.env
+*.env.local
+appsettings.Development.json
+appsettings.Local.json
+secrets.json
+
+# ─── IDE / OS ───────────────────────────────────────────
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# ─── Banco / logs locais ────────────────────────────────
+*.mdf
+*.ldf
+*.log
+
+# ─── Documentos particulares de projeto ─────────────────
+docs/

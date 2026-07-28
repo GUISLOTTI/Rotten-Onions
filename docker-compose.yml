@@ -1,0 +1,41 @@
+# RabbitMQ para o Rotten Onions.
+# Subir:   docker compose up -d
+# Painel:  http://localhost:15672   (usuário: rotten / senha: onions)
+# Derrubar: docker compose down     (adicione -v para apagar os dados)
+
+services:
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: rotten-onions-rabbitmq
+    ports:
+      - "5672:5672"      # AMQP — a aplicação conecta aqui
+      - "15672:15672"    # Painel web de gerenciamento
+    environment:
+      RABBITMQ_DEFAULT_USER: rotten
+      RABBITMQ_DEFAULT_PASS: onions
+    volumes:
+      - rabbitmq-data:/var/lib/rabbitmq
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 15s
+      timeout: 10s
+      retries: 5
+
+  # ─── OPCIONAL ────────────────────────────────────────────────
+  # Você já tem SQL Server 2022 local, então isto fica comentado.
+  # Descomente se um dia quiser o banco em container.
+  #
+  # sqlserver:
+  #   image: mcr.microsoft.com/mssql/server:2022-latest
+  #   container_name: rotten-onions-sql
+  #   ports:
+  #     - "1433:1433"
+  #   environment:
+  #     ACCEPT_EULA: "Y"
+  #     MSSQL_SA_PASSWORD: "Rotten@Onions123"
+  #   volumes:
+  #     - sqlserver-data:/var/opt/mssql
+
+volumes:
+  rabbitmq-data:
+  # sqlserver-data:
