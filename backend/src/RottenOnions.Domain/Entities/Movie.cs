@@ -1,4 +1,4 @@
-using RottenOnions.Domain.Entities;
+namespace RottenOnions.Domain.Entities;
 
 public class Movie
 {
