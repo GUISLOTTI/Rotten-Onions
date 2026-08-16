@@ -1,13 +1,13 @@
 <Solution>
   <Folder Name="/src/">
-    <Project Path="src/RottenOnions.Api/RottenOnions.Api.csproj" />
-    <Project Path="src/RottenOnions.Application/RottenOnions.Application.csproj" />
-    <Project Path="src/RottenOnions.Contracts/RottenOnions.Contracts.csproj" />
-    <Project Path="src/RottenOnions.Domain/RottenOnions.Domain.csproj" />
-    <Project Path="src/RottenOnions.Infrastructure/RottenOnions.Infrastructure.csproj" />
-    <Project Path="src/RottenOnions.Worker/RottenOnions.Worker.csproj" />
+    <Project Path="backend/src/RottenOnions.Api/RottenOnions.Api.csproj" />
+    <Project Path="backend/src/RottenOnions.Application/RottenOnions.Application.csproj" />
+    <Project Path="backend/src/RottenOnions.Contracts/RottenOnions.Contracts.csproj" />
+    <Project Path="backend/src/RottenOnions.Domain/RottenOnions.Domain.csproj" />
+    <Project Path="backend/src/RottenOnions.Infrastructure/RottenOnions.Infrastructure.csproj" />
+    <Project Path="backend/src/RottenOnions.Worker/RottenOnions.Worker.csproj" />
   </Folder>
   <Folder Name="/tests/">
-    <Project Path="tests/RottenOnions.UnitTests/RottenOnions.UnitTests.csproj" />
+    <Project Path="backend/tests/RottenOnions.UnitTests/RottenOnions.UnitTests.csproj" />
   </Folder>
 </Solution>
